@@ -28,5 +28,6 @@ HTML Toast消息提示方法<br>
 </body>
 </html>
 ```
+测试页：https://ziazusa.github.io/html-toast-notice/demo.html
 ### 参考
 https://www.youtube.com/watch?v=BaakzvsR4UU
