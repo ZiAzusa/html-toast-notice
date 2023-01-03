@@ -19,6 +19,7 @@
     top:30px;
     right:20px;
     box-sizing:border-box;
+    z-index:100;
 }
 .toasts .toast {
     width:400px;
