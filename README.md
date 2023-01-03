@@ -29,5 +29,12 @@ HTML Toast消息提示方法<br>
 </html>
 ```
 测试页：https://ziazusa.github.io/html-toast-notice/demo.html<br>
+### 可选配置
+打开[./js/toast.js](https://github.com/ZiAzusa/html-toast-notice/blob/main/js/toast.js)，可以在文件顶部找到以下配置项：
+```JavaScript
+var config = {
+    withDarkMode = false; //是否在用户浏览器设置夜间模式时切换Toast消息的颜色样式，true: 切换(黑底白字) false: 不切换
+};
+```
 ### 参考
 [Create A Toast Notification in HTML CSS & JavaScript | Toast Notification in JavaScript (CodingNepal)](https://www.youtube.com/watch?v=BaakzvsR4UU)
