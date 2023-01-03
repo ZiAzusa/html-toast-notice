@@ -30,4 +30,4 @@ HTML Toast消息提示方法<br>
 ```
 测试页：https://ziazusa.github.io/html-toast-notice/demo.html<br>
 ### 参考
-https://www.youtube.com/watch?v=BaakzvsR4UU
+[Create A Toast Notification in HTML CSS & JavaScript | Toast Notification in JavaScript (CodingNepal)](https://www.youtube.com/watch?v=BaakzvsR4UU)
