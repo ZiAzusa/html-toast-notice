@@ -1,9 +1,8 @@
 # html-toast-notice
 HTML Toast消息提示方法<br>
 可以自定义消息类型，消息内容，是否自动关闭消息，自动关闭消息的等待时间<br>
-<br>
-食用方法：<br>
-```
+### 食用方法
+```HTML
 <html>
 <head>
     ...
@@ -29,5 +28,5 @@ HTML Toast消息提示方法<br>
 </body>
 </html>
 ```
-<br>
-参考：https://www.youtube.com/watch?v=BaakzvsR4UU
+### 参考
+https://www.youtube.com/watch?v=BaakzvsR4UU
