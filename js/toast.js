@@ -1,3 +1,7 @@
+var config = {
+    withDarkMode = false; //是否在用户浏览器设置夜间模式时切换Toast消息的颜色样式，true: 切换(黑底白字) false: 不切换
+}
+
 var iconData = {
     success: 'fa-circle-check',
     error: 'fa-circle-xmark',
@@ -8,7 +12,13 @@ var toastsID = 0;
 var toasts = document.createElement("ul");
 toasts.className = "toasts";
 document.body.appendChild(toasts);
-
+if (config.withDarkMode == true) {
+    var darkStyle = document.createElement("link");
+    darkStyle.rel = "stylesheet";
+    darkStyle.type = "text/css";
+    darkStyle.href = "./css/dark-mode.css";
+    document.head.appendChild(darkStyle);
+}
 /**
  * @function createToast
  * @description 在当前页创建一个Toast消息
