@@ -12,11 +12,10 @@ document.body.appendChild(toasts);
 /**
  * @function createToast
  * @description 在当前页创建一个Toast消息
- * @param id {Str} 消息类型 可以使用的类型有：success, error, warning, info
- * @param text {Str} 消息内容
+ * @param id {String} 消息类型 可以使用的类型有：success, error, warning, info
+ * @param text {String} 消息内容
  * @param autoclose {Boolean} 是否自动关闭 true: 消息将会在计时结束后自动关闭  false: 消息将会一直显示直至用户手动关闭 此参数默认为false
- * @param timer {Int} 计时器，单位为秒，当autoclose为true时此参数将起作用 此参数默认为5秒
- * @author ZiAzusa 2023.1.3
+ * @param timer {Number} 计时器，单位为秒，当autoclose为true时此参数将起作用 此参数默认为5秒
  * @example createToast("success", "Success: Test测试", true, 5)
  */
 function createToast(id, text, autoclose = false, timer = 5) {
