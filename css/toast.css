@@ -1,0 +1,134 @@
+@import './google-font.css';
+:root {
+    --dark:#34495e;
+    --light:#fff;
+    --success:#0abf30;
+    --error:#e24d4c;
+    --warning:#e9bd0c;
+    --info:#3498db;
+}
+.toasts :where(.toast, .column) {
+    display:flex;
+    align-items:center;
+}
+.toasts {
+    font-family:'Poppins', sans-serif;
+    padding:0;
+    margin:0;
+    position:fixed;
+    top:30px;
+    right:20px;
+    box-sizing:border-box;
+}
+.toasts .toast {
+    width:400px;
+    list-style:none;
+    position:relative;
+    overflow:hidden;
+    border-radius:4px;
+    padding:16px 17px;
+    margin-bottom:10px;
+    background-color:var(--light);
+    justify-content:space-between;
+    animation:show_toast 0.3s forwards;
+}
+.toasts .floatToast {
+    visibility:hidden;
+    transition:height 0.3s;
+}
+.toast .column i {
+    font-size:1.75rem;
+}
+.toast .column span {
+    font-size:1.07rem;
+    margin-left:12px;
+}
+.toast.hide {
+    animation:hide_toast 0.3s forwards;
+}
+.toast i:last-child {
+    color:#aeb0d7;
+    cursor:pointer;
+}
+.toast i:last-child:hover {
+    color:var(--dark);
+}
+.toast::before {
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:3px;
+}
+.toast.success::before {
+    background-color:var(--success);
+}
+.toast.error::before {
+    background-color:var(--error);
+}
+.toast.warning::before {
+    background-color:var(--warning);
+}
+.toast.info::before {
+    background-color:var(--info);
+}
+.toast.success .column i {
+    color:var(--success);
+}
+.toast.error .column i {
+    color:var(--error);
+}
+.toast.warning .column i {
+    color:var(--warning);
+}
+.toast.info .column i {
+    color:var(--info);
+}
+@media screen and (max-width:490px) {
+    .toasts {
+        width:calc(100vw * 434 / 490);
+        left:0;
+        right:0;
+        margin:auto;
+    }
+    .toasts .toast {
+        width:calc(100% - 34px);
+        position:static;
+        font-size:1rem;
+        margin:auto auto 10px 10px;
+    }
+}
+@keyframes progress {
+    100% {
+        width:0;
+    }
+}
+@keyframes show_toast {
+    0% {
+        transform:translateX(100%);
+    }
+    40% {
+        transform:translateX(-5%);
+    }
+    80% {
+        transform:translateX(0);
+    }
+    100% {
+        transform:translateX(-10px);
+    }
+}
+@keyframes hide_toast {
+    0% {
+        transform:translateX(-10%);
+    }
+    40% {
+        transform:translateX(0%);
+    }
+    80% {
+        transform:translateX(-5%);
+    }
+    100% {
+        transform:translateX(calc(100% + 20px));
+    }
+}

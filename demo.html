@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/toast.css">
+    <title>Toast Demo</title>
+    <!-- Font Awesome CND link for icons -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        body {
+            background-color:var(--dark);
+        }
+        #success {
+            background-color:var(--success);
+        }
+        #error {
+            background-color:var(--error);
+        }
+        #warning {
+            background-color:var(--warning);
+        }
+        #info {
+            background-color:var(--info);
+        }
+        #main {
+            position:fixed;
+            left:10px;
+            bottom:0px;
+            color:var(--light);
+        }
+        button {
+            width:120px;
+            border:none;
+            outline:none;
+            color:var(--light);
+            cursor:pointer;
+            padding:10px 20px;
+            font-size:1.2rem;
+            border-radius:4px;
+            margin-bottom:10px;
+        }
+        p {
+            margin-bottom:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <p>
+            存在时长：<input id='timer' type='number' value='5' style="width:5rem;">秒<span id='note'></span><br>
+            自动关闭：是<input id='radio0' type='radio' checked='checked' onclick="radioCheck(0)">&emsp;&emsp;否<input id='radio1' type='radio' onclick="radioCheck(1)">
+        </p>
+        <left>
+            <button id='success' onclick='createToast("success", "Success: Test测试", autoclose, document.getElementById("timer").value)'>Success</button><br>
+            <button id='error' onclick='createToast("error", "Error: Test测试", autoclose, document.getElementById("timer").value)'>Error</button><br>
+            <button id='warning' onclick='createToast("warning", "Warning: Test测试", autoclose, document.getElementById("timer").value)'>Warning</button><br>
+            <button id='info' onclick='createToast("info", "Info: Test测试", autoclose, document.getElementById("timer").value)'>Info</button>
+        </left>
+    </div>
+    <script src="./js/toast.js" defer></script>
+    <script>
+        var autoclose = true;
+        function radioCheck(id) {
+            if (id == 0) {
+                autoclose = true;
+                document.getElementById("radio1").checked = null;
+                document.getElementById("note").innerHTML = null;
+            } else {
+                autoclose = false;
+                document.getElementById("radio0").checked = null;
+                document.getElementById("note").innerHTML = " (不可用)";
+            }
+        }
+    </script>
+</body>
+</html>
