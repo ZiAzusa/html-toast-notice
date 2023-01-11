@@ -1,4 +1,8 @@
-# html-toast-notice
+# HTML Toast Notice
+![maven](https://img.shields.io/badge/HTML-red)
+![maven](https://img.shields.io/badge/JavaScript-yellow)
+![maven](https://img.shields.io/badge/CSS-blue)
+![maven](https://img.shields.io/badge/Toast-green)
 HTML Toast消息提示方法<br>
 可以自定义消息类型，消息内容，是否自动关闭消息，自动关闭消息的等待时间<br>
 ### 食用方法
